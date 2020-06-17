@@ -232,13 +232,14 @@ Table Name: PetType
 
 ### Stretch Goals
 
-* [ ] ***delete all customers that have no orders. Should delete 2 (or 3 if you haven't deleted the record added) records***
+* [x] ***delete all customers that have no orders. Should delete 2 (or 3 if you haven't deleted the record added) records***
 
 ```SQL
-
+DELETE FROM customers 
+WHERE customer_id not in (SELECT customer_id FROM orders)
 ```
 
-* [ ] ***Create Database and Table: After creating the database, tables, columns, and constraint, generate the script necessary to recreate the database. This script is what you will submit for review***
+* [x] ***Create Database and Table: After creating the database, tables, columns, and constraint, generate the script necessary to recreate the database. This script is what you will submit for review***
 
 * use pgAdmin to create a database, naming it `budget`.
 * add an `accounts` table with the following _schema_:
